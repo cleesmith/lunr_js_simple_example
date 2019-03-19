@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>lunr js</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="wrap">
+  <div class="controls">
+    <div>
+      <label>Search:&nbsp;</label>
+      <input id="searchterm" type="text">
+      &nbsp;&nbsp;
+      <a class="all" href="#">show all decks</a>
+    </div>
+  </div>
+
+  <div class="decks">
+    <div id="deck-list-container">
+      <div>
+        <ul>
+          <li deck-id="000">
+            <h2><a href="javascript:void(0);" target="_blank" title="sorry, i have not made a YouTube video for this">childhood doodles</a></h2>
+            <p>tarot 000, 1960 ?, pencil drawings on cloth paper, no YouTube video</p>
+          </li>
+          <li deck-id="001">
+            <h2><a href="https://www.youtube.com/watch?v=cJxjoMIX6lE" target="_blank" title="click to watch YouTube video">Granny's RWS tarot</a></h2>
+            <p>tarot 001, 1965 ?, no text no numbers, MPC 2018, holographic cards with the 1909 RWS tarot images deck via MakePlayingCards</p>
+          </li>
+          <li deck-id="300">
+            <h2><a href="https://youtu.be/jK8Nz0-zJvY" target="_blank" title="click to watch YouTube video">Douglas Sheridan</a></h2>
+            <p>tarot 300, 1972, Alfred Douglas, art: David Sheridan, mix of RWS and Marseille</p>
+          </li>
+<!--      
+          <li deck-id="?">
+            <h2><a href="" target="_blank" title="click to watch YouTube video">Douglas Sheridan</a></h2>
+            <p>tarot ?, </p>
+          </li>
+ -->
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<script src='js/lunr.js'></script>
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src="js/index.js"></script>
+</body>
+</html>

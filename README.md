@@ -1,0 +1,1 @@
+A simple example of using Lunr.js to index/search a static web page.
