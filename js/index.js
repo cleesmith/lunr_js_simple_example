@@ -1,13 +1,15 @@
 // load Lunr db and search functions
 
 var listSelector = "#deck-list-container li";
+// cls: so we don't start with a blank page:
+showAll();
 
 var idx = lunr(function() {
   // define searchable fields
   this.ref("id");
   this.field("title");
   this.field("body");
-  
+
   this.k1(1.3)
   this.b(0)
 
@@ -20,7 +22,7 @@ var idx = lunr(function() {
 
     return { id: ref, title: title, body: body };
   });
-  
+
   // add all entires to lunr
   documents.forEach(function(doc) {
     this.add(doc);
