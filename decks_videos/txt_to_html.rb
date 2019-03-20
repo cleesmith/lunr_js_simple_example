@@ -7,6 +7,7 @@ begin
   file = File.open('decks.html', 'w')
   File.open("decks_in_numerical_order.txt").each_slice(2) do |twolines|
     line1 = twolines[0].rstrip
+    num, name = line1.split(" ", 2)
     line2 = twolines[1].rstrip
     # puts "*** #{$.}. #{line1} #{line2}"
     # add surrounding HTML here:
