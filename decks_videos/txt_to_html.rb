@@ -18,9 +18,9 @@ begin
     file.puts "<li deck-id=\"#{num}\">"
     file.puts "\t<h2><a href=\"#{ytlink}\" target=\"_blank\" title=\"watch YouTube video\">#{name}</a></h2>"
     if num[0] == 'o' then
-      file.puts "\t<p>odeck</p>"
+      file.puts "\t<p>odeck #{num}</p>"
     else
-      file.puts "\t<p>tdeck</p>"
+      file.puts "\t<p>tdeck #{num}</p>"
     end
     file.puts "</li>"
   end
