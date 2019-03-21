@@ -45,6 +45,7 @@ function search(searchTerm) {
   var results = idx.search(searchTerm);
   // reset(hide) all entries
   $(listSelector).removeClass("show");
+  // console.log("found: "+results.length);
   for (var i = 0; i < results.length; i++) {
     var result = results[i];
     $(listSelector + "[deck-id=" + result.ref + "]").addClass("show");
@@ -68,7 +69,17 @@ $("#searchterm").on("search paste keyup", function(event) {
   }
 });
 
-// and show all results when clicking this button
+// show all results when clicking this button
 $(".all").click(function() {
   showAll();
+});
+
+// show oracle decks only
+$(".oracle-decks").click(function() {
+  search("odeck");
+});
+
+// show tarot decks only
+$(".tarot-decks").click(function() {
+  search("tdeck");
 });

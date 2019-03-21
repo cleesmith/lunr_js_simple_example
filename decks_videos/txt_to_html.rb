@@ -6,12 +6,23 @@ begin
   # use 'w' to create a new file everytime:
   file = File.open('decks.html', 'w')
   File.open("decks_in_numerical_order.txt").each_slice(2) do |twolines|
-    line1 = twolines[0].rstrip
-    num, name = line1.split(" ", 2)
-    line2 = twolines[1].rstrip
+    aline = twolines[0].rstrip
+    num, name = aline.split(" ", 2)
+    ytlink = twolines[1].rstrip
     # puts "*** #{$.}. #{line1} #{line2}"
-    # add surrounding HTML here:
-    file.puts "#{line1} #{line2}"
+    # add surrounding HTML here, for example:
+    # <li deck-id="o001">
+    #   <h2><a href="javascript:void(0);">some oracle deck</a></h2>
+    #   <p>oracle o001, cards</p>
+    # </li>
+    file.puts "<li deck-id=\"#{num}\">"
+    file.puts "\t<h2><a href=\"#{ytlink}\" target=\"_blank\" title=\"watch YouTube video\">#{name}</a></h2>"
+    if num[0] == 'o' then
+      file.puts "\t<p>odeck</p>"
+    else
+      file.puts "\t<p>tdeck</p>"
+    end
+    file.puts "</li>"
   end
 rescue IOError => e
   puts "IOError!!!"
